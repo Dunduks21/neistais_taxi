@@ -33,9 +33,9 @@
 
                     <!-- Language Switcher -->
                     <div class="flex items-center space-x-2 ms-6">
-                        <a href="{{ route('locale.switch', ['locale' => 'en']) }}" class="text-sm hover:underline {{ app()->getLocale() == 'en' ? 'font-bold' : '' }}">EN</a>
-                        <span>|</span>
-                        <a href="{{ route('locale.switch', ['locale' => 'lv']) }}" class="text-sm hover:underline {{ app()->getLocale() == 'lv' ? 'font-bold' : '' }}">LV</a>
+                        <a href="{{ route('locale.switch', ['locale' => 'en']) }}" class="text-sm text-white hover:underline {{ app()->getLocale() == 'en' ? 'font-bold' : '' }}">EN</a>
+                        <span class="text-white">|</span>
+                        <a href="{{ route('locale.switch', ['locale' => 'lv']) }}" class="text-sm text-white hover:underline {{ app()->getLocale() == 'lv' ? 'font-bold' : '' }}">LV</a>
                     </div>
                 </div>
             </div>
@@ -102,9 +102,9 @@
 
             <!-- Language Switcher Responsive -->
             <div class="flex space-x-4 px-4 py-2">
-                <a href="{{ route('locale.switch', ['locale' => 'en']) }}" class="text-sm hover:underline {{ app()->getLocale() == 'en' ? 'font-bold' : '' }}">EN</a>
-                <span>|</span>
-                <a href="{{ route('locale.switch', ['locale' => 'lv']) }}" class="text-sm hover:underline {{ app()->getLocale() == 'lv' ? 'font-bold' : '' }}">LV</a>
+                <a href="{{ route('locale.switch', ['locale' => 'en']) }}" class="text-sm text-white hover:underline {{ app()->getLocale() == 'en' ? 'font-bold' : '' }}">EN</a>
+                <span class="text-white">|</span>
+                <a href="{{ route('locale.switch', ['locale' => 'lv']) }}" class="text-sm text-white hover:underline {{ app()->getLocale() == 'lv' ? 'font-bold' : '' }}">LV</a>
             </div>
         </div>
 
