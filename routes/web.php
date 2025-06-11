@@ -18,12 +18,10 @@ Route::get('/dashboard', function () {
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 // ✅ Valodas maiņas maršruts (vienkāršs closure variants, neprasa kontrolieri)
-Route::get('locale/{locale}', function ($locale) {
-    if (in_array($locale, ['en', 'lv'])) {
-        session()->put('locale', $locale);
-    }
-    return redirect()->back();
-})->name('locale.switch');
+use App\Http\Controllers\LocaleController;
+
+Route::get('locale/{locale}', [LocaleController::class, 'switch'])->name('locale.switch');
+
 
 // Aizsargāti maršruti tikai autorizētiem lietotājiem
 Route::middleware('auth')->group(function () {

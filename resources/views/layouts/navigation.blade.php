@@ -9,7 +9,7 @@
                 <!-- Logo -->
                 <div class="shrink-0 flex items-center">
                     <a href="{{ route('dashboard') }}">
-                        <x-application-logo class="block h-9 w-auto fill-current text-gray-800 dark:text-gray-200" />
+                        <img src="https://charatoon.com/photo/6903.png" alt="Logo" class="h-9 w-auto" />
                     </a>
                 </div>
 
@@ -33,9 +33,9 @@
 
                     <!-- Language Switcher -->
                     <div class="flex items-center space-x-2 ms-6">
-                        <a href="{{ route('locale.switch', ['locale' => 'en']) }}" class="text-sm text-white hover:underline {{ app()->getLocale() == 'en' ? 'font-bold' : '' }}">EN</a>
-                        <span class="text-white">|</span>
-                        <a href="{{ route('locale.switch', ['locale' => 'lv']) }}" class="text-sm text-white hover:underline {{ app()->getLocale() == 'lv' ? 'font-bold' : '' }}">LV</a>
+                        <a href="{{ route('locale.switch', ['locale' => 'en']) }}" class="text-sm dark:text-white hover:underline {{ app()->getLocale() == 'en' ? 'font-bold' : '' }}">EN</a>
+                        <span class="dark:text-white">|</span>
+                        <a href="{{ route('locale.switch', ['locale' => 'lv']) }}" class="text-sm dark:text-white hover:underline {{ app()->getLocale() == 'lv' ? 'font-bold' : '' }}">LV</a>
                     </div>
                 </div>
             </div>
@@ -101,10 +101,12 @@
             </x-responsive-nav-link>
 
             <!-- Language Switcher Responsive -->
-            <div class="flex space-x-4 px-4 py-2">
-                <a href="{{ route('locale.switch', ['locale' => 'en']) }}" class="text-sm text-white hover:underline {{ app()->getLocale() == 'en' ? 'font-bold' : '' }}">EN</a>
+            <div class="flex items-center space-x-2 ms-6">
+                <a href="{{ route('locale.switch', ['locale' => 'en']) }}"
+                     class="text-sm dark:text-white hover:underline {{ app()->getLocale() == 'en' ? 'font-bold' : '' }}">EN</a>
                 <span class="text-white">|</span>
-                <a href="{{ route('locale.switch', ['locale' => 'lv']) }}" class="text-sm text-white hover:underline {{ app()->getLocale() == 'lv' ? 'font-bold' : '' }}">LV</a>
+                <a href="{{ route('locale.switch', ['locale' => 'lv']) }}" 
+                    class="text-sm dark:text-white hover:underline {{ app()->getLocale() == 'lv' ? 'font-bold' : '' }}">LV</a>
             </div>
         </div>
 

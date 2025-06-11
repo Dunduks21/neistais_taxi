@@ -10,6 +10,9 @@ class SetLocale
 {
     public function handle($request, Closure $next)
     {
+
+        dd('SetLocale middleware is working');
+
         $locale = Session::get('locale', config('app.locale'));
         App::setLocale($locale);
 

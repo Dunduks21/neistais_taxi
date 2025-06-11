@@ -12,7 +12,7 @@ class RideController extends Controller
      */
     public function index()
     {
-        // Iegūst visus braucienus ar saistītajiem vadītājiem un klientiem (ja tādi ir)
+        // Iegūst visus braucienus ar saistītajiem vadītājiem un klientiem
         $rides = Ride::with(['driver', 'customer'])->get();
 
         // Nosūta datus uz skatu
@@ -45,14 +45,6 @@ class RideController extends Controller
         Ride::create($validated);
 
         return redirect()->route('rides.index')->with('success', 'Ride created successfully.');
-    }
-
-    /**
-     * Display the specified resource.
-     */
-    public function show(string $id)
-    {
-        //
     }
 
     /**
